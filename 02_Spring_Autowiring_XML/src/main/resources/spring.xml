@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <!-- Configuring the Student Bean -->
+     <bean id="stu" class="com.ashokit.spring.beans.Student" autowire="byType">
+         <property name="studentId" value="AIT123"/>
+         <property name="name" value="Mahesh"/>
+     </bean>
+     
+       <!-- Configuring the Address Bean -->
+      <bean id="address1" class="com.ashokit.spring.beans.Address">
+          <property name="doorNo" value="1-2-3"/>
+          <property name="cityName" value="Chennai"/>
+          <property name="pincode" value="12324"/>
+     </bean>
+     
+      <!-- Configuring the Address Bean -->
+      <bean id="address2" class="com.ashokit.spring.beans.Address" primary="true">
+          <property name="doorNo" value="1-2-3"/>
+          <property name="cityName" value="Hyderabad"/>
+          <property name="pincode" value="123245"/>
+     </bean>
+     
+      <!-- Configuring the Course Bean -->
+      <bean id="course1" class="com.ashokit.spring.beans.Course">
+          <property name="courseId" value="SBMS"/>
+          <property name="courseName" value="SpringBootMicroservices"/>
+          <property name="courseFee" value="8000"/>
+     </bean>
+</beans>

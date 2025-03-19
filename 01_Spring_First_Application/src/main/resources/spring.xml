@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+          <!-- configuring the demo class as spring bean -->
+     <bean id="demoBean" class="com.ashokit.spring.beans.Demo">
+         <!-- Informing to spring container to inject value for message property using setter method -->
+     	<property name="message" value="Welcome To AshokIT For Spring..."/>
+     	<property name="title" value ="Backend Development"/>
+     </bean>
+     
+          <!--  configuring the test class as spring bean -->
+     <bean id="testBean" class="com.ashokit.spring.beans.Test">
+          <!-- Informing to spring container to inject value for message property using constructor -->
+          <constructor-arg name="message" value="Welcome To AshokIT..."/>
+          <constructor-arg name="title" value="SpringBootAndMicroservices"/>
+     </bean>
+     
+         <!-- configuring the employee class as spring bean -->
+     <bean id="empBean" class="com.ashokit.spring.beans.Employee">
+		  <property name="empId" value="AIT123"/>
+		  <property name="empName" value="Mahesh"/>
+		  <property name="address" ref="addressBean"/>     
+     </bean>
+		
+		  <!-- configuring the Address class as spring bean -->
+     <bean id="addressBean" class="com.ashokit.spring.beans.Address">
+          <property name="doorNo" value="1-2-3"/>
+          <property name="streetName" value="ABC"/>
+          <property name="pincode" value="12324"/>
+     </bean>
+</beans>
