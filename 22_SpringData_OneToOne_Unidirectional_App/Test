@@ -1,0 +1,5 @@
+select l1_0.login_id,l1_0.created_date,l1_0.login_pwd,l1_0.login_status,
+s1_0.student_id,s1_0.created_date,s1_0.contact_no,
+s1_0.email,s1_0.location,s1_0.name,l1_0.login_name 
+from ashokit_logins l1_0 left join ashokit_students s1_0 
+on s1_0.student_id=l1_0.student_id where l1_0.login_id=?
