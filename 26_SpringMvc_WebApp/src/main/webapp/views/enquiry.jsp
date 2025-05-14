@@ -9,7 +9,7 @@
 <body>
 	<div style='text-align: center; color: red;margin-bottom:8px;'>Welcome To AshokIT
 		For Spring MVC Application Development...</div>
-	<form action="sendEnquiry" method="post">
+	<form action="enquiryDetails" method="post">
 		<table align="center">
 			<tr>
 				<td>Name</td>
